@@ -35,3 +35,22 @@ html {
 div {
     margin: 0;
 }
+
+@media (max-width: 700px) {
+    .App {
+        flex-wrap: wrap;
+    }
+    .input-box {
+        display: inline-flex;
+        left: 0;
+        width: 90%;
+        margin: 10% 5%;
+    }
+    .Board {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: 100vw;
+        margin: auto 0;
+    }
+}

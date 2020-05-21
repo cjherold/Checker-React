@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-
-
+// these are the individual squares in the checker board
 const Square = (props) => {
     // square edge length
     const edge = ((1/props.size * 100) + '%');

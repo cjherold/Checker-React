@@ -4,14 +4,20 @@ import Board from './Board';
 
 const App = () => {
 
-  const [size, setSize] = useState(4);
+  // state of input value
+  const [size, setSize] = useState(8);
 
+
+  // updates board when size is changed
   function updateSize(event) {
-    const newSize = event.target.value;
+    let newSize = event.target.value;
+
     if (newSize < 10 && newSize > -1) {
       console.log('New board size: ' + newSize);
       setSize(newSize);
+      
     } else {
+      console.log(newSize);
       console.log('That size is pretty big. It might cause issues.');
     }
     
@@ -19,7 +25,9 @@ const App = () => {
 
     return (
         <div className="App">
+            {/* input box with initial value of 8 */}
             <input className="input-box" onChange={updateSize} value={size}/>
+            {/* builds checkerboard  */}
             <Board squares={size}/>
         </div>
     );
